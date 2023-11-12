@@ -1,0 +1,121 @@
+@import "../../Assets/scss/default-import";
+
+/* DAY OR WEEK STYLES */
+
+.container {
+	width: 100%;
+	// height: remHandler(320);
+	@include container($gray-dark2, $gray);
+	padding: remHandler(20) remHandler(30);
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.item {
+	width: remHandler(145);
+	height: remHandler(280);
+	background: rgb(248, 133, 8);
+	background: linear-gradient(171.67deg, #fd8300 0%, rgba(246, 250, 217, 0.4) 144%);
+	border-radius: vwHandler(40);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	color: $text;
+	font-family: $extrabold;
+	padding-top: remHandler(15);
+
+	&_day {
+		width: remHandler(200);
+		font-size: remHandler(20);
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&_night {
+		background: rgb(68, 61, 100);
+		background: linear-gradient(0deg, rgba(68, 61, 100, 0.4290091036414566) 0%, rgba(68, 61, 100, 1) 100%);
+	}
+
+	&__time {
+		font-size: remHandler(25);
+	}
+
+	&__temp {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		font-size: remHandler(25);
+
+		& span {
+			width: remHandler(110);
+			height: remHandler(40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family: $regular;
+			font-size: remHandler(15);
+			line-height: remHandler(18);
+		}
+	}
+
+	&__img {
+		width: remHandler(90);
+		height: remHandler(90);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: remHandler(-10) 0 remHandler(-15);
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+			filter: contrast(1.2) brightness(1.3);
+		}
+
+		& svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__wind {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: remHandler(22);
+		margin-top: remHandler(5);
+
+		& svg,
+		& img {
+			width: remHandler(45);
+			height: remHandler(45);
+			display: block;
+			object-fit: contain;
+			margin-bottom: remHandler(-5);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1367px) {
+	.container {
+
+		padding: remHandler(20) remHandler(20);
+	}
+
+	.item {
+		width: remHandler(135);
+
+		&_day {
+			width: remHandler(180);
+		}
+
+	}
+}

@@ -1,0 +1,67 @@
+@import '../../Assets/scss/default-import';
+
+/* SEARCH FORM STYLES */
+
+.search {
+  width: remHandler(803);
+  height: remHandler(65);
+  position: relative;
+  @include container($gray-dark, $gray-dark);
+
+  & label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 remHandler(35);
+  }
+
+  & input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: remHandler(18);
+
+    &::placeholder {
+      font-size: remHandler(18);
+    }
+  }
+
+  & button {
+    width: remHandler(45);
+    height: remHandler(45);
+    margin-right: remHandler(29);
+    cursor: pointer;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.error {
+  color: $status-red;
+
+  &_pos {
+    position: absolute;
+    top: remHandler(20);
+    right: remHandler(60);
+  }
+
+  &_text {
+    font-size: remHandler(16);
+  }
+}
+
+textarea.error,
+input.error {
+  color: $text;
+  border-color: $status-red;
+
+  &::placeholder {
+    color: $text;
+  }
+}

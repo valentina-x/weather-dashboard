@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+@function remHandler($size) {
+	@return math.div($size, 16)+rem;
+}
+
+@function vwHandler($x) {
+	@return math.div($x, 19.2)+vw;
+}
+
+@function prcHandler($x, $y, $symbol) {
+	@return math.div($x, $y)+$symbol;
+}
+
+@mixin container($bgcolor, $bordercolor) {
+	background: $bgcolor;
+	border: 1px solid $bordercolor;
+	box-shadow: 0 vwHandler(4) vwHandler(40) rgba(0, 0, 0, 0.25);
+	border-radius: vwHandler(40);
+}

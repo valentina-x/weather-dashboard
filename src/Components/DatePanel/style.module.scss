@@ -1,0 +1,39 @@
+@import "../../Assets/scss/default-import";
+
+/* DATE PANEL STYLES */
+
+.date {
+	width: remHandler(510);
+	height: remHandler(330);
+	@include container($gray-dark2, $gray);
+	margin: remHandler(39) 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	&__city {
+		text-align: center;
+		font-size: remHandler(38);
+		line-height: 1.1;
+		font-family: $bold;
+		margin-bottom: remHandler(20);
+	}
+
+	&__time {
+		min-height: remHandler(98);
+		font-size: remHandler(96);
+		line-height: 1;
+		font-family: $bold;
+	}
+
+	&__day {
+		font-size: remHandler(20);
+		margin-top: remHandler(10);
+	}
+
+	@media screen and (max-width: 1367px) {
+		width: remHandler(390);
+		margin: remHandler(25) 0 0 0;
+	}
+}

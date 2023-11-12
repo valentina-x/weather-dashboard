@@ -1,0 +1,43 @@
+@import "_default-import";
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	color: $primary;
+	font-family: $regular, Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: $links;
+}
+
+label {
+	position: relative;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 1367px) {
+
+	html,
+	body {
+		height: auto;
+		min-height: 100%;
+	}
+
+	#root {
+		min-height: 100%;
+	}
+}

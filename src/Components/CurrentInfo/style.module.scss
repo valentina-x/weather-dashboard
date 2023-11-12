@@ -1,0 +1,136 @@
+@import "../../Assets/scss/default-import";
+
+/* CURRENT INFO STYLES */
+
+.currentinfo {
+	width: remHandler(780);
+	height: remHandler(330);
+	@include container($gray-dark2, $gray);
+	display: flex;
+	align-items: center;
+	padding: remHandler(20) remHandler(25);
+	margin: remHandler(39) 0 0 auto;
+
+	&__weather {
+		width: remHandler(270);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background-color: rgba(51, 56, 87, 0.1);
+		padding: remHandler(20);
+		// margin-top: remHandler(40);
+		margin-left: remHandler(30);
+		margin-right: remHandler(60);
+		border-radius: remHandler(20);
+
+		& img {
+			width: remHandler(100);
+			height: remHandler(100);
+			object-fit: contain;
+		}
+
+		& span {
+			color: #4d466b;
+			text-align: center;
+			font-size: remHandler(24);
+			font-family: cursive;
+			font-weight: bold;
+		}
+	}
+
+	&__tempblock {
+		margin-right: remHandler(60);
+	}
+
+	&__temp {
+		font-size: remHandler(88);
+		line-height: 1;
+		font-family: $bold;
+		margin-bottom: remHandler(5);
+	}
+
+	&__feellike {
+		font-size: remHandler(15);
+		font-family: $semibold;
+		margin-left: remHandler(10);
+		margin-bottom: remHandler(30);
+
+		& span {
+			font-size: remHandler(25);
+			font-family: $bold;
+		}
+	}
+
+	&__suninfoblock {
+		padding-top: remHandler(10);
+	}
+
+	&__suninfo {
+		display: flex;
+		align-items: flex-start;
+		align-items: center;
+		font-size: remHandler(18);
+		font-family: $semibold;
+		margin-bottom: remHandler(10);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& svg {
+			width: remHandler(55);
+			height: remHandler(55);
+			margin-right: remHandler(20);
+		}
+
+		& span {
+			display: block;
+			font-size: remHandler(20);
+			font-family: $bold;
+			margin-bottom: remHandler(3);
+		}
+	}
+
+	&__row {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+
+		&:first-child {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__column {
+		width: 100%;
+	}
+
+	&__item {
+		text-align: center;
+		margin-right: remHandler(30);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& svg {
+			width: remHandler(50);
+			height: remHandler(50);
+		}
+
+		&_info {
+			font-size: remHandler(20);
+			font-family: $bold;
+			margin: remHandler(5) 0;
+		}
+
+		&_title {
+			font-size: remHandler(16);
+		}
+	}
+
+	@media screen and (max-width: 1367px) {
+		margin: remHandler(25) 0 0 auto;
+	}
+}

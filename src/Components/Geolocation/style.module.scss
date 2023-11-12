@@ -1,0 +1,19 @@
+@import "../../Assets/scss/default-import";
+
+/* GEOLOCATION STYLES */
+
+.geolocation {
+	width: remHandler(292);
+	height: remHandler(65);
+	@include container($green, $green);
+	color: $white;
+	font-family: $semibold;
+	font-size: remHandler(20);
+	margin: 0 0 0 auto;
+	cursor: pointer;
+	transition: all 0.6s;
+
+	&:hover {
+		background-color: darken($green, 3%);
+	}
+}

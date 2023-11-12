@@ -1,0 +1,48 @@
+@import "../../Assets/scss/default-import";
+
+/* TOGGLE BUTTONS STYLES */
+
+.buttons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: remHandler(30) 0 remHandler(25) remHandler(30);
+
+	&__title {
+		color: $white;
+		font-family: $bold;
+		font-size: remHandler(18);
+		margin-left: remHandler(30);
+		margin-right: remHandler(50);
+	}
+
+	&__button {
+		width: remHandler(160);
+		height: remHandler(50);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include container($primary, $primary);
+		opacity: 0.6;
+		color: $light-gray;
+		font-family: $semibold;
+		font-size: remHandler(18);
+		line-height: 1;
+		cursor: pointer;
+		margin-right: remHandler(20);
+		transition: all 0.6s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&_active {
+			opacity: 1;
+		}
+	}
+
+	@media screen and (max-width: 1367px) {
+		margin: remHandler(20) 0 remHandler(20) remHandler(30);
+	}
+}
